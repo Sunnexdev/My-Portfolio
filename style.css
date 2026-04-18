@@ -393,6 +393,7 @@ footer {
   }
   .menu-toggle {
     display: block;
+    font-size: 2rem;
   }
 
   .nav-links {
