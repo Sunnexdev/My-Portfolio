@@ -429,10 +429,6 @@ footer {
 }
 
 @media (max-width: 30rem) {
-  html {
-    font-size: 85%;
-  }
-
   .container {
     padding-inline: 2rem;
   }
