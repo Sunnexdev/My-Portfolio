@@ -188,7 +188,8 @@ header {
   font-size: 1.2rem;
 }
 
-.home-image img {
+.home-image img,
+.about-image img {
   width: 100%;
   max-width: 28.125rem;
   height: auto;
@@ -200,11 +201,10 @@ header {
 
 /* ABOUT STYLES */
 .about-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  padding: 4rem 0;
-  gap: 2rem;
+  padding-block: 4rem;
 }
 .about-text {
   display: flex;
@@ -414,8 +414,42 @@ footer {
     display: flex;
   }
 
-  /* HERO SECTION */
+  /* ABOUT SECTION */
+  .about-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+  }
+  .about-text {
+    align-items: center;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 30rem) {
+  html {
+    font-size: 80%;
+  }
+
+  .container {
+    padding-inline: 2rem;
+  }
+
+  .home-section {
+    display: grid;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-text {
+    align-items: center;
+    padding-block-end: 2rem;
+    text-align: center;
+  }
+
   .home-image img {
-    /* width: 0%; */
+    display: none;
   }
 }
