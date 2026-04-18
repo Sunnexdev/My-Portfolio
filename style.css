@@ -127,6 +127,10 @@ header {
   justify-content: space-between;
   align-items: center;
   color: #fff;
+  position: fixed;
+  background-color: var(--primary-bg);
+  width: 100%;
+  z-index: 1000;
 }
 
 .nav-links {
@@ -163,6 +167,7 @@ header {
 .home-container {
   background: url('images/blake-connally-IKUYGCFmfw4-unsplash.jpg') no-repeat
     center center/cover;
+  padding-block-start: 1rem;
 }
 .home-section {
   display: flex;
@@ -195,7 +200,8 @@ header {
   height: auto;
   border-radius: 10px;
 }
-.home-image img:hover {
+.home-image img:hover,
+.about-image img:hover {
   transform: translateY(-3px) scale(1.03);
 }
 
@@ -400,10 +406,10 @@ footer {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 20px;
-    right: 0;
-    background-color: #101529;
-    padding: 2rem;
+    top: 60px;
+    left: 0;
+    background-color: var(--primary-bg);
+    padding: 1.8rem;
   }
 
   .nav-list {
@@ -413,6 +419,23 @@ footer {
 
   .nav-links.active {
     display: flex;
+  }
+
+  /* HOME SECTION */
+  .home-image img {
+    display: none;
+  }
+
+  .home-section {
+    display: grid;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-text {
+    align-items: center;
+    padding-block-end: 2rem;
+    text-align: center;
   }
 
   /* ABOUT SECTION */
@@ -432,21 +455,5 @@ footer {
 @media (max-width: 30rem) {
   .container {
     padding-inline: 2rem;
-  }
-
-  .home-section {
-    display: grid;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .home-text {
-    align-items: center;
-    padding-block-end: 2rem;
-    text-align: center;
-  }
-
-  .home-image img {
-    display: none;
   }
 }
