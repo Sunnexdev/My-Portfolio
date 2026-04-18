@@ -200,8 +200,8 @@ header {
 
 /* ABOUT STYLES */
 .about-section {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: center;
   padding: 4rem 0;
   gap: 2rem;
@@ -385,7 +385,11 @@ footer {
 
 @media (max-width: 48rem) {
   html {
-    font-size: 80%;
+    font-size: 85%;
+  }
+
+  header {
+    padding: 1rem;
   }
   .menu-toggle {
     display: block;
@@ -412,6 +416,6 @@ footer {
 
   /* HERO SECTION */
   .home-image img {
-    width: 70%;
+    /* width: 0%; */
   }
 }
